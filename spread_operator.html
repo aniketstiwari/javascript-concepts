@@ -1,4 +1,21 @@
 <script>
+  //Example 1
+
+  const fullName = ['aniket', 'shivam', 'tiwari'];
+  const biodata = [1, ...fullName, 'male']
+
+  console.log(fullName);
+  console.log(biodata);
+
+
+  //Example 2 array destructor
+
+  const shootingGames = ['GTA 5', 'Far cry 4', 'Call of duty'];
+  var [first, ...remaining] = shootingGames;
+  console.log(first);
+  console.log(remaining);
+
+  //Example 3
   const fullname = {
     fname: "aniket",
     lname: "tiwari"
