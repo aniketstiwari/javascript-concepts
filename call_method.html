@@ -1,0 +1,21 @@
+<script>
+  // With call() an object can use a method belonging to another object
+
+  const obj = {
+    name: "aniket",
+    content: "javascript",
+    feature: function(language) {
+      console.log(`this is ${this.name} and my favourite language is ${this.content} and the second favourite language is ${language}`)
+    }
+  }
+
+ // obj.feature('ruby')
+
+  const obj2 = {
+    name: "shivam",
+    content: "python"
+  }
+
+  obj.feature.call(obj2, 'ruby')
+
+</script>

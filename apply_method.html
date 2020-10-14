@@ -1,0 +1,26 @@
+<script>
+  //call method takes argument separately
+  //apply method takes argument as an array
+
+  const obj = {
+    name: "aniket",
+    content: "javascript",
+    feature: function(language) {
+      console.log(`this is ${this.name} and my favourite language is ${this.content} and the second favourite language is ${language}`)
+    }
+  }
+
+ // obj.feature('ruby')
+
+  const obj2 = {
+    name: "shivam",
+    content: "python"
+  }
+
+  obj.feature.apply(obj2, ['ruby'])
+
+  let maximum = Math.max(1,2,3)
+  let arrmaximum = Math.max.apply(null, [1,2,3,4,5,6])
+  console.log(arrmaximum)
+
+</script>
