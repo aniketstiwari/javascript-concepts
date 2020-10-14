@@ -1,0 +1,52 @@
+<script>
+//By this method we can bind an object to a common function so that the function gives different result when its need
+
+//Example 1
+  // const obj = {
+  //   name: "aniket",
+  //   content: "javascript",
+  //   feature: function() {
+  //     console.log(`this is ${this.name} and my favourite language is ${this.content}`)
+  //   }
+  // }
+
+  //let newobj = obj.feature;
+  //newobj()
+
+//this bind() method takes an object as an first argument and creates a new function
+  // let newobj = obj.feature.bind(obj);
+  // newobj()
+
+// Example 2
+
+
+const obj = {
+  name: "aniket",
+  content: "ruby",    
+}
+
+const obj1 = {
+  name: "shivam",
+  content: "python",    
+}
+
+const obj2 = {
+  name: "tiwari",
+  content: "javascript",    
+}
+
+function feature() {
+  console.log(`this is ${this.name} and my favourite language is ${this.content}`)
+}
+
+let newobj = feature.bind(obj);
+newobj();
+
+let newobj1 = feature.bind(obj1);
+newobj1();
+
+let newobj2 = feature.bind(obj2);
+newobj2();
+
+
+</script>
